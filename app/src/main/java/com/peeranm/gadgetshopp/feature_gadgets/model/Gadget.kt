@@ -1,8 +1,12 @@
 package com.peeranm.gadgetshopp.feature_gadgets.model
 
+import android.os.Parcelable
+import kotlinx.parcelize.Parcelize
+
+@Parcelize
 data class Gadget(
     val name: String,
-    val price: String,
+    val price: Double,
     val rating: Int,
     val imageUrl: String
-)
+) : Parcelable

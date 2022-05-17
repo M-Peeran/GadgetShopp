@@ -16,6 +16,9 @@ interface ShoppingCartDao {
     @Query("select * from table_shopping_cart_items")
     fun getShoppingCartItems(): Flow<List<ShoppingCartItem>>
 
+    @Query("select sum(quantity * price) from table_shopping_cart_items")
+    fun getTotalPrice(): Flow<Double>
+
     @Query("delete from table_shopping_cart_items")
     fun clear()
 

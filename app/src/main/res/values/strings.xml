@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">GadgetShopp</string>
+    <string name="gadgets_feed">Trending Gadgets</string>
+    <string name="gadget_details">Gadget Details</string>
+    <string name="cart">Cart</string>
 </resources>

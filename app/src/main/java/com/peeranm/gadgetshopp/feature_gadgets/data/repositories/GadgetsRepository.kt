@@ -1,6 +1,6 @@
 package com.peeranm.gadgetshopp.feature_gadgets.data.repositories
 
-import com.peeranm.gadgetshopp.core.Resource
+import com.peeranm.gadgetshopp.core.utils.Resource
 import com.peeranm.gadgetshopp.feature_gadgets.data.local.entities.ShoppingCartItem
 import com.peeranm.gadgetshopp.feature_gadgets.model.Gadget
 import kotlinx.coroutines.flow.Flow

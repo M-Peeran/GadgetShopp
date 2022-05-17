@@ -4,7 +4,7 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.peeranm.gadgetshopp.core.Constants
+import com.peeranm.gadgetshopp.core.utils.Constants
 import com.peeranm.gadgetshopp.feature_gadgets.data.local.daos.ShoppingCartDao
 import com.peeranm.gadgetshopp.feature_gadgets.data.local.entities.ShoppingCartItem
 

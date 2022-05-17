@@ -9,7 +9,7 @@ class GadgetMapper {
     fun fromDtoToUiModel(dto: GadgetDto): Gadget {
         return Gadget(
             name = dto.name,
-            price = dto.price,
+            price = dto.price.toDouble(),
             imageUrl = dto.image_url,
             rating = dto.rating
         )

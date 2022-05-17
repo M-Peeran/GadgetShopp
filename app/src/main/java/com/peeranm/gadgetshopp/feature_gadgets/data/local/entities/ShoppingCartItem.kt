@@ -9,7 +9,7 @@ class ShoppingCartItem(
     val id: Long = 0L,
     val name: String,
     val imageUrl: String,
-    val price: String,
+    val price: Double,
     val rating: Int,
     val quantity: Int
 )
