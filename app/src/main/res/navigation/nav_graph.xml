@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/gadgetsFragment">
+
+    <fragment
+        android:id="@+id/gadgetsFragment"
+        android:name="com.peeranm.gadgetshopp.feature_gadgets.presentation.gedgets.GadgetsFragment"
+        android:label="gadgets_fragment"
+        tools:layout="@layout/gadgets_fragment" >
+        <action
+            android:id="@+id/action_gadgetsFragment_to_gadgetDetailsFragment"
+            app:destination="@id/gadgetDetailsFragment" />
+        <action
+            android:id="@+id/action_gadgetsFragment_to_shoppingCartFragment"
+            app:destination="@id/shoppingCartFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/gadgetDetailsFragment"
+        android:name="com.peeranm.gadgetshopp.feature_gadgets.presentation.gadget_details.GadgetDetailsFragment"
+        android:label="gadget_details_fragment"
+        tools:layout="@layout/gadget_details_fragment" >
+        <argument
+            android:name="selectedGadget"
+            app:argType="com.peeranm.gadgetshopp.feature_gadgets.model.Gadget" />
+    </fragment>
+    <fragment
+        android:id="@+id/shoppingCartFragment"
+        android:name="com.peeranm.gadgetshopp.feature_gadgets.presentation.shopping_cart.ShoppingCartFragment"
+        android:label="shopping_cart_fragment"
+        tools:layout="@layout/shopping_cart_fragment" />
+</navigation>

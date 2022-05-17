@@ -1,0 +1,114 @@
+package com.peeranm.gadgetshopp.feature_gadgets.presentation.gedgets
+
+import android.os.Bundle
+import android.view.*
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
+import androidx.lifecycle.lifecycleScope
+import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.DividerItemDecoration
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.snackbar.Snackbar
+import com.peeranm.gadgetshopp.R
+import com.peeranm.gadgetshopp.core.utils.Resource
+import com.peeranm.gadgetshopp.core.utils.collectWithLifecycle
+import com.peeranm.gadgetshopp.core.utils.setActionBarTitle
+import com.peeranm.gadgetshopp.databinding.GadgetsFragmentBinding
+import com.peeranm.gadgetshopp.feature_gadgets.model.Gadget
+import com.peeranm.gadgetshopp.feature_gadgets.utils.GadgetAdapter
+import com.peeranm.gadgetshopp.feature_gadgets.utils.OnItemClickListener
+import dagger.hilt.android.AndroidEntryPoint
+
+@AndroidEntryPoint
+class GadgetsFragment : Fragment(), OnItemClickListener {
+
+    private val viewModel: GadgetsViewModel by viewModels()
+
+    private var _binding: GadgetsFragmentBinding? = null
+    private val binding: GadgetsFragmentBinding
+    get() = _binding!!
+
+    private var adapter: GadgetAdapter? = null
+
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
+        _binding = GadgetsFragmentBinding.inflate(
+            inflater,
+            container,
+            false
+        )
+        return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        setActionBarTitle(R.string.gadgets_feed)
+
+        adapter = GadgetAdapter(requireContext(), lifecycleScope, this)
+
+        binding.apply {
+            val layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
+            listGadgets.layoutManager = layoutManager
+            listGadgets.addItemDecoration(DividerItemDecoration(requireContext(), layoutManager.orientation))
+            listGadgets.adapter = adapter
+        }
+
+        collectWithLifecycle(viewModel.gadgets) { resource ->
+            when (resource) {
+                is Resource.Loading -> {
+                    showProgressbar()
+                }
+                is Resource.Success -> {
+                    hideProgressbar()
+                    adapter?.submitData(resource.data)
+                }
+                is Resource.Error -> {
+                    hideProgressbar()
+                    Snackbar.make(view, resource.message, Snackbar.LENGTH_SHORT).show()
+                }
+            }
+        }
+    }
+
+    override fun <T> onItemClick(data: T, position: Int) {
+        findNavController().navigate(
+            GadgetsFragmentDirections.actionGadgetsFragmentToGadgetDetailsFragment(data as Gadget)
+        )
+    }
+
+    private fun showProgressbar() {
+        binding.progressBar.visibility = View.VISIBLE
+    }
+
+    private fun hideProgressbar() {
+        binding.progressBar.visibility = View.GONE
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        inflater.inflate(R.menu.options_menu, menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            R.id.actionCart -> {
+                findNavController().navigate(
+                    GadgetsFragmentDirections.actionGadgetsFragmentToShoppingCartFragment()
+                )
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        adapter?.onClear()
+        _binding = null
+        adapter = null
+    }
+
+}
