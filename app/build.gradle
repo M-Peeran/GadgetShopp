@@ -22,6 +22,9 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
+        // Providing base url
+        buildConfigField("String", "BASE_URL", BASE_URL)
+
         // ViewBinding
         viewBinding { enabled true }
     }
@@ -62,9 +65,6 @@ dependencies {
     // Retrofit + Gson
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
-
-    // Paging 3
-    implementation 'androidx.paging:paging-runtime-ktx:3.1.1'
 
     // Http Logging
     implementation 'com.squareup.okhttp3:logging-interceptor:4.9.3'
