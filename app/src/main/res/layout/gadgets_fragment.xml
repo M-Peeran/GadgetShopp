@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".feature_gadgets.presentation.gedgets.GadgetsFragment" >
+    tools:context=".feature_gadgets_shopping.presentation.gedgets.GadgetsFragment" >
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/listGadgets"

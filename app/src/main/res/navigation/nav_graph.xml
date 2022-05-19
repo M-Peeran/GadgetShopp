@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/gadgetsFragment"
-        android:name="com.peeranm.gadgetshopp.feature_gadgets.presentation.gedgets.GadgetsFragment"
+        android:name="com.peeranm.gadgetshopp.feature_gadgets_shopping.presentation.gedgets.GadgetsFragment"
         android:label="gadgets_fragment"
         tools:layout="@layout/gadgets_fragment" >
         <action
@@ -16,19 +16,56 @@
         <action
             android:id="@+id/action_gadgetsFragment_to_shoppingCartFragment"
             app:destination="@id/shoppingCartFragment" />
+        <action
+            android:id="@+id/action_gadgetsFragment_to_ordersFragment"
+            app:destination="@id/ordersFragment" />
     </fragment>
     <fragment
         android:id="@+id/gadgetDetailsFragment"
-        android:name="com.peeranm.gadgetshopp.feature_gadgets.presentation.gadget_details.GadgetDetailsFragment"
+        android:name="com.peeranm.gadgetshopp.feature_gadgets_shopping.presentation.gadget_details.GadgetDetailsFragment"
         android:label="gadget_details_fragment"
         tools:layout="@layout/gadget_details_fragment" >
         <argument
             android:name="selectedGadget"
-            app:argType="com.peeranm.gadgetshopp.feature_gadgets.model.Gadget" />
+            app:argType="com.peeranm.gadgetshopp.feature_gadgets_shopping.model.Gadget" />
+        <action
+            android:id="@+id/action_gadgetDetailsFragment_to_shoppingCartFragment"
+            app:destination="@id/shoppingCartFragment" />
+        <action
+            android:id="@+id/action_gadgetDetailsFragment_to_ordersFragment"
+            app:destination="@id/ordersFragment" />
     </fragment>
     <fragment
         android:id="@+id/shoppingCartFragment"
-        android:name="com.peeranm.gadgetshopp.feature_gadgets.presentation.shopping_cart.ShoppingCartFragment"
+        android:name="com.peeranm.gadgetshopp.feature_gadgets_shopping.presentation.shopping_cart.ShoppingCartFragment"
         android:label="shopping_cart_fragment"
-        tools:layout="@layout/shopping_cart_fragment" />
+        tools:layout="@layout/shopping_cart_fragment" >
+        <action
+            android:id="@+id/action_shoppingCartFragment_to_orderSuccessfulFragment"
+            app:destination="@id/orderSuccessfulFragment"
+            app:popUpTo="@id/gadgetsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/orderDetailsFragment"
+        android:name="com.peeranm.gadgetshopp.feature_gadgets_shopping.presentation.order_details.OrderDetailsFragment"
+        android:label="order_details_fragment"
+        tools:layout="@layout/order_details_fragment" >
+        <argument
+            android:name="selectedOrder"
+            app:argType="com.peeranm.gadgetshopp.feature_gadgets_shopping.data.local.entities.OrderItem" />
+    </fragment>
+    <fragment
+        android:id="@+id/ordersFragment"
+        android:name="com.peeranm.gadgetshopp.feature_gadgets_shopping.presentation.orders.OrdersFragment"
+        android:label="orders_fragment"
+        tools:layout="@layout/orders_fragment" >
+        <action
+            android:id="@+id/action_ordersFragment_to_orderDetailsFragment"
+            app:destination="@id/orderDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/orderSuccessfulFragment"
+        android:name="com.peeranm.gadgetshopp.feature_gadgets_shopping.order_successful.OrderSuccessfulFragment"
+        android:label="fragment_order_successful"
+        tools:layout="@layout/fragment_order_successful" />
 </navigation>

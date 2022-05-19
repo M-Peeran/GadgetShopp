@@ -3,14 +3,24 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Peeran PC/AndroidStudioProjects/GadgetShopp/app/src/main/res/drawable/badge_shape.xml" value="0.1535" />
+        <entry key="..\:/Users/Peeran PC/AndroidStudioProjects/GadgetShopp/app/src/main/res/drawable/ic_check_circle.xml" value="0.1535" />
         <entry key="..\:/Users/Peeran PC/AndroidStudioProjects/GadgetShopp/app/src/main/res/drawable/ic_star.xml" value="0.1535" />
+        <entry key="..\:/Users/Peeran PC/AndroidStudioProjects/GadgetShopp/app/src/main/res/layout/cart_action_item.xml" value="1.5394321766561514" />
+        <entry key="..\:/Users/Peeran PC/AndroidStudioProjects/GadgetShopp/app/src/main/res/layout/cart_item.xml" value="0.8800000000000001" />
+        <entry key="..\:/Users/Peeran PC/AndroidStudioProjects/GadgetShopp/app/src/main/res/layout/fragment_order_successful.xml" value="0.4" />
         <entry key="..\:/Users/Peeran PC/AndroidStudioProjects/GadgetShopp/app/src/main/res/layout/gadget_details_fragment.xml" value="0.4" />
         <entry key="..\:/Users/Peeran PC/AndroidStudioProjects/GadgetShopp/app/src/main/res/layout/gadget_item.xml" value="0.536" />
         <entry key="..\:/Users/Peeran PC/AndroidStudioProjects/GadgetShopp/app/src/main/res/layout/gadgets_fragment.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Peeran PC/AndroidStudioProjects/GadgetShopp/app/src/main/res/layout/main_activity.xml" value="0.264" />
         <entry key="..\:/Users/Peeran PC/AndroidStudioProjects/GadgetShopp/app/src/main/res/layout/main_fragment.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Peeran PC/AndroidStudioProjects/GadgetShopp/app/src/main/res/layout/order_details_fragment.xml" value="0.24010416666666667" />
+        <entry key="..\:/Users/Peeran PC/AndroidStudioProjects/GadgetShopp/app/src/main/res/layout/order_item.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Peeran PC/AndroidStudioProjects/GadgetShopp/app/src/main/res/layout/orders_fragment.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Peeran PC/AndroidStudioProjects/GadgetShopp/app/src/main/res/layout/ordet_item.xml" value="0.536" />
         <entry key="..\:/Users/Peeran PC/AndroidStudioProjects/GadgetShopp/app/src/main/res/layout/shopping_cart_fragment.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/Peeran PC/AndroidStudioProjects/GadgetShopp/app/src/main/res/menu/options_menu.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Peeran PC/AndroidStudioProjects/GadgetShopp/app/src/main/res/layout/shopping_cart_item.xml" value="0.536" />
+        <entry key="..\:/Users/Peeran PC/AndroidStudioProjects/GadgetShopp/app/src/main/res/menu/options_menu.xml" value="0.4" />
       </map>
     </option>
   </component>

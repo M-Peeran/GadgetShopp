@@ -6,4 +6,7 @@ object Constants {
     const val ERROR_UNAUTHORIZED = 401
     const val ERROR_INTERNAL_SERVER = 500
     const val SELECTED_GADGET = "selectedGadget"
+    const val SELECTED_ORDER = "selectedOrder"
+    const val ANIM_DURATION = 350L
+    const val CHECKOUT_DELAY = 5000L
 }

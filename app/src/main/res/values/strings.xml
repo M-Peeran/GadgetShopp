@@ -3,4 +3,19 @@
     <string name="gadgets_feed">Trending Gadgets</string>
     <string name="gadget_details">Gadget Details</string>
     <string name="cart">Cart</string>
+    <string name="your_cart">Your Cart</string>
+    <string name="your_orders">Your Orders</string>
+    <string name="rs_template">₹%1$s0</string>
+    <string name="purchase_timestamp">Ordered on %1$s</string>
+    <string name="empty_cart_message">Your cart is empty!</string>
+    <string name="order_success">Order Successful!</string>
+    <string name="order_state_confirmed">Order Confirmed</string>
+    <string name="order_state_unconfirmed">Order Placed</string>
+    <string name="order_state_delivered">Delivered</string>
+    <string name="order_state_on_the_way">On-The-Way</string>
+    <string name="order_state_shipped">Shipped</string>
+    <string name="gadget_image">Gadget image</string>
+    <string name="add_to_cart">Add to cart</string>
+    <string name="icon_star">Icon star</string>
+    <string name="checkout">Checkout</string>
 </resources>

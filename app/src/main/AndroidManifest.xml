@@ -3,6 +3,9 @@
     package="com.peeranm.gadgetshopp">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
 
     <application
         android:name=".core.di.MyApplication"
@@ -13,7 +16,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GadgetShopp">
         <activity
-            android:name=".feature_gadgets.presentation.MainActivity"
+            android:name=".feature_gadgets_shopping.presentation.MainActivity"
+            android:screenOrientation="portrait"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
