@@ -19,12 +19,12 @@ import kotlinx.coroutines.launch
 class GadgetAdapter(
     context: Context,
     scope: LifecycleCoroutineScope,
-    listener: OnItemClickListener
+    listener: OnItemClickListener<Gadget>
 ) : RecyclerView.Adapter<GadgetAdapter.GadgetHolder>() {
 
     private var context: Context? = null
     private var scope: LifecycleCoroutineScope? = null
-    private var listener: OnItemClickListener? = null
+    private var listener: OnItemClickListener<Gadget>? = null
 
     init {
         this.context = context

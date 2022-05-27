@@ -1,2 +1,2 @@
 # GadgetShopp
-Assignment app
+Buy exciting gadgets!

@@ -20,7 +20,7 @@ import com.peeranm.gadgetshopp.feature_gadgets_shopping.utils.OrderAdapter
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class OrdersFragment : Fragment(), OnItemClickListener {
+class OrdersFragment : Fragment(), OnItemClickListener<OrderItem> {
 
     private val viewModel: OrdersViewModel by viewModels()
 
@@ -61,8 +61,7 @@ class OrdersFragment : Fragment(), OnItemClickListener {
 
     }
 
-    override fun <T> onItemClick(view: View?, data: T, position: Int) {
-        data as OrderItem
+    override fun onItemClick(view: View?, data: OrderItem, position: Int) {
         findNavController().navigate(
             OrdersFragmentDirections.actionOrdersFragmentToOrderDetailsFragment(data)
         )

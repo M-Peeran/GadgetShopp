@@ -22,12 +22,12 @@ import kotlinx.coroutines.launch
 class OrderAdapter(
     context: Context,
     scope: LifecycleCoroutineScope,
-    listener: OnItemClickListener
+    listener: OnItemClickListener<OrderItem>
 ): RecyclerView.Adapter<OrderAdapter.OrderItemHolder>() {
 
     private var context: Context? = null
     private var scope: LifecycleCoroutineScope? = null
-    private var listener: OnItemClickListener? = null
+    private var listener: OnItemClickListener<OrderItem>? = null
 
     init {
         this.context = context

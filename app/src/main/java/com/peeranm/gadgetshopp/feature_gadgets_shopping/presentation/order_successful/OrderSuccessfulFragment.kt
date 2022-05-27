@@ -1,4 +1,4 @@
-package com.peeranm.gadgetshopp.feature_gadgets_shopping.order_successful
+package com.peeranm.gadgetshopp.feature_gadgets_shopping.presentation.order_successful
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

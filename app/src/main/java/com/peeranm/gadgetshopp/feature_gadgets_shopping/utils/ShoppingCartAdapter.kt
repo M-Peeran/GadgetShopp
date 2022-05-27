@@ -19,12 +19,12 @@ import kotlinx.coroutines.launch
 class ShoppingCartAdapter(
     context: Context,
     scope: LifecycleCoroutineScope,
-    listener: OnItemClickListener
+    listener: OnItemClickListener<ShoppingCartItem>
 ): RecyclerView.Adapter<ShoppingCartAdapter.CartItemHolder>() {
 
     private var context: Context? = null
     private var scope: LifecycleCoroutineScope? = null
-    private var listener: OnItemClickListener? = null
+    private var listener: OnItemClickListener<ShoppingCartItem>? = null
 
     init {
         this.context = context

@@ -23,7 +23,7 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
 @AndroidEntryPoint
-class ShoppingCartFragment : Fragment(), OnItemClickListener {
+class ShoppingCartFragment : Fragment(), OnItemClickListener<ShoppingCartItem> {
 
     private val viewModel: ShoppingCartViewModel by viewModels()
 
@@ -94,8 +94,7 @@ class ShoppingCartFragment : Fragment(), OnItemClickListener {
         }
     }
 
-    override fun <T> onItemClick(view: View?, data: T, position: Int) {
-        data as ShoppingCartItem
+    override fun onItemClick(view: View?, data: ShoppingCartItem, position: Int) {
         when (view?.id) {
             R.id.btnIncrementQuantity -> viewModel.onEvent(ShoppingCartEvent.IncrementQuantityForItem(data))
             R.id.btnDecrementQuanity -> viewModel.onEvent(ShoppingCartEvent.DecrementQuantityForItem(data))

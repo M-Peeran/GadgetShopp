@@ -22,7 +22,7 @@ import com.peeranm.gadgetshopp.feature_gadgets_shopping.utils.OnItemClickListene
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class GadgetsFragment : Fragment(), OnItemClickListener {
+class GadgetsFragment : Fragment(), OnItemClickListener<Gadget> {
 
     private val viewModel: GadgetsViewModel by viewModels()
 
@@ -82,9 +82,9 @@ class GadgetsFragment : Fragment(), OnItemClickListener {
         }
     }
 
-    override fun <T> onItemClick(view: View?, data: T, position: Int) {
+    override fun onItemClick(view: View?, data: Gadget, position: Int) {
         findNavController().navigate(
-            GadgetsFragmentDirections.actionGadgetsFragmentToGadgetDetailsFragment(data as Gadget)
+            GadgetsFragmentDirections.actionGadgetsFragmentToGadgetDetailsFragment(data)
         )
     }
 

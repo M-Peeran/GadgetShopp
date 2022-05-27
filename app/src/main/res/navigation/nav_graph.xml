@@ -65,7 +65,7 @@
     </fragment>
     <fragment
         android:id="@+id/orderSuccessfulFragment"
-        android:name="com.peeranm.gadgetshopp.feature_gadgets_shopping.order_successful.OrderSuccessfulFragment"
+        android:name="com.peeranm.gadgetshopp.feature_gadgets_shopping.presentation.order_successful.OrderSuccessfulFragment"
         android:label="fragment_order_successful"
         tools:layout="@layout/fragment_order_successful" />
 </navigation>
